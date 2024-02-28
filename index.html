@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immobiliare Italia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="conteiner main-nav">
+            <a href="index.html" class="link-logo link">
+                <svg class="icon" width="54" height="54">
+                    <use href="./images/sprite.svg#icon-home"></use>
+                </svg>
+                <span>Proprietà</span><span class="logo-part">Italia</span>
+            </a>
+        <nav>
+            <ul class="site-nav list">
+                <li class="item"><a href="#blog" class="nav-link link">Blog</a></li>
+                <li class="item"><a href="#contacts" class="nav-link link">Contatti</a></li>
+                <li class="item"><a href="#FAQ" class="nav-link link">FAQ</a></li>
+                <li class="item"><a href="#about_us" class="nav-link link">Chi siamo</a></li>
+                <li class="item"><a href="#ricerca" class="nav-link link">Ricerca</a></li>
+            </ul>
+        </nav>
+      <form class="form-search" id="ricerca">
+      <input type="text" name="text" placeholder="Ricerca"/> 
+      </form>
+        </div>
+    </header>
+    <main>
+      <!--Section blog-->
+        <section class="section hero" id="blog">
+            <div class="conteiner">
+            <h1 class="hero-title">Acquista un immobile in Italia e ottieni un rimborso del 5% sul costo dell'appartamento</h1>
+            </div>
+            </section>
+        <!--Section about us-->
+            <section class="section" id="about_us">
+                <div class="conteiner">
+                <h2 class="visually-hidden">Advantages</h2>
+                <ul class="list advantages">
+                    <li class="items">
+                        <div class="icon-background">
+                        <svg class="icon-benefits" width="54" height="54">
+                            <use href="./images/sprite.svg#icon-office"></use>
+                        </svg>
+                        <p class="benefits">Propria piattaforma di investimento</p>
+                    </div>
+                    </li>
+                    <li class="items">
+                        <div class="icon-background">
+                            <svg class="icon-benefits" width="54" height="54">
+                                <use href="./images/sprite.svg#icon-user-check"></use>
+                            </svg>
+                        <p class="benefits">Selezione personale degli oggetti: non abbiamo paura dei compiti complessi</p>
+                        </div>
+                    </li>
+                    <li class="items">
+                        <div class="icon-background">
+                            <svg class="icon-benefits" width="54" height="54">
+                                <use href="./images/sprite.svg#icon-headphones"></use>
+                            </svg>
+                    <p class="benefits">Dipartimento di assistenza clienti</p>
+                    </div>
+                    </li>
+                    <li class="items">
+                        <div class="icon-background">
+                            <svg class="icon-benefits" width="54" height="54">
+                                <use href="./images/sprite.svg#icon-bubbles2"></use>
+                            </svg>
+                        <p class="benefits">Professionalità di ogni dipendente</p>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+                <button type="button" class="connect-btn" data-modal-open>Connettiti con noi</button>
+                <div class="backdrop is-hidden" data-modal>
+                    <div class="modal">
+                        <button class="button-close" data-modal-close> X </button>
+                        <form class="modal-form" id="contact-form">
+                            <h3 class="modal-form-text">Lascia i tuoi contatti e ti richiameremo</h3>
+                            <label class="modal-form-field">
+                            <span class="modal-form-desc"> Nome </span>
+                            <span class="modal-form-wrapper">
+                                <input type="text" class="modal-form-input" name="name" id="name"/>
+                                <svg class="form-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-users"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <label class="modal-form-field">
+                            <span class="modal-form-desc"> Email </span>
+                            <span class="modal-form-wrapper">
+                                <input type="email" class="modal-form-input" name="mail" id="email" />
+                                <svg class="form-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-envelop"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <label class="modal-form-field">
+                            <span class="modal-form-desc"> Telefono </span>
+                            <span class="modal-form-wrapper">
+                                <input type="tel" class="modal-form-input" name="tel" id="phone" />
+                                <svg class="form-icon" width="18" height="18">
+                                    <use href="./images/sprite.svg#icon-phone"></use>
+                                </svg>
+                            </span>
+                        </label>
+                        <button class="modal-button" type="submit" onclick="submitForm(event)"> Inviare </button> 
+                        </form>
+                        <div id="thank-you-message" style="display: none">
+                            <h3>Grazie!</h3>
+                            <p>Il tuo modulo è stato inviato con successo.</p>
+                          </div>
+                    </div>
+                </div>
+            </section>
+            <!--Section FAQ-->
+            <section class="section" id="FAQ">
+              <h2 class="visually-hidden">Customer reviews</h2>
+              <div class="conteiner reviews">
+                <div class="customer-reviews">
+        <img src="./images/camilagarcia.jpg" alt="Camila Garcia" class="reviews-image"  width="100" height="100">
+        <div>
+          <h3 class="reviews-name">Camila, Milano</h3>
+        <p class="reviews-text">
+          Ho acquistato il mio primo immobile in Italia grazie a voi. Volevo esprimere una gratitudine speciale per
+          l'eccellente servizio e il calore che ho ricevuto dal tuo dipendente Andrey.
+        </p>
+        </div>
+      </div>
+      <div class="customer-reviews">
+        <img src="./images/markguerrero.jpg" alt="Mark Guerrero" class="reviews-image"  width="100" height="100">
+        <div>
+          <h3 class="reviews-name">Mark, Roma</h3>
+        <p class="reviews-text">
+          Ringrazio la società PropertyItaly per l'eccellente servizio e assistenza nell'acquisto di immobili a Roma!
+        </p>
+        </div>
+      </div>
+      <div class="customer-reviews">
+       <img src="./images/tomford.jpg" alt="Tom Ford" class="reviews-image"  width="100" height="100">
+       <div>
+        <h3 class="reviews-name">Tom, Venezia</h3>
+        <p class="reviews-text">
+          Vorrei ringraziare Cesare per l'ottimo servizio e l'umanità dimostrata, 
+          ottimo servizio in fase di scelta dell'appartamento.
+        </p>
+       </div>
+      </div>
+      <div class="customer-reviews">
+        <img src="./images/danielwilson.jpg" alt="Daniel Wilson" class="reviews-image"  width="100" height="100">
+        <div>
+          <h3 class="reviews-name">Daniel, Milano</h3>
+        <p class="reviews-text">
+          Vorrei esprimere la mia gratitudine all'esperto immobiliare PropertyItaly Alexandro 
+          per la sua professionalità e il suo atteggiamento sensibile nei confronti dei clienti.
+        </p>
+        </div>
+      </div>
+</section>
+<!--Section Contacts-->
+            <section class="section" id="contacts">
+                <div class="conteiner">
+                  <h2 class="visually-hidden">Contacts</h2>
+                  <ul class="list-contacts">
+                    <li class="list info-contacts">
+                      <div class="city-contacts">
+                        <p class="city-name-contacts">Milano</p>
+                        <a href="https://www.google.com/maps?q=45.433768198554866,9.185428211639408" target="_blank" class="city-address-contacts">Via Valla Lorenzo, 25 - 20141 Milano
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5599.576648563025!2d9.185428211639408!3d45.433768198554866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c46e1d843c5d%3A0xab644b0b36e1e00!2zVmlhIExvcmVuem8gVmFsbGEsIDI1LCAyMDE0MSBNaWxhbm8gTUksINCY0YLQsNC70LjRjw!5e0!3m2!1sru!2sde!4v1709074237176!5m2!1sru!2sde" width="0" height="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </a>
+                    </div>
+                      <div class="day-and-time-contacts">
+                        <p class="day-contacts">Lunedì-Venerdì</p>
+                        <p class="time-contacts morning-time">10:00 AM - 19:00 PM</p>
+                        <p class="day-contacts">Sabato</p>
+                        <p class="time-contacts">12:00 AM - 16:00 PM</p>
+                      </div>
+                      <ul class="menu-contacts">
+                        <li class="list menu-item-contacts">
+                          <a href="tel:+391517668284" class="contacts-phone-mail">+39 (151) 7668 284</a>
+                        </li>
+                        <li class="list menu-item-contacts">
+                          <a href="mailto:noreply@gmail.com" class="contacts-phone-mail">noreply@gmail.com</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list info-contacts">
+                      <div class="city-contacts">
+                        <p class="city-name-contacts">Roma</p>
+                        <a href="https://www.google.com/maps?q=41.8992779,12.492813799999997" target="_blank" class="city-address-contacts">Via Palermo, 75 - 00184 Roma
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.7014240988847!2d12.492813799999997!3d41.8992779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61afabf6c625%3A0x879da23b94ff23e4!2zVmlhIFBhbGVybW8sIDc1LCAwMDE4NCBSb21hIFJNLCDQmNGC0LDQu9C40Y8!5e0!3m2!1sru!2sde!4v1709075254719!5m2!1sru!2sde" width="0" height="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </a>
+                      </div>
+                      <div class="day-and-time-contacts">
+                        <p class="day-contacts">Lunedì-Venerdì</p>
+                        <p class="time-contacts morning-time">10:00 AM - 19:00 PM</p>
+                        <p class="day-contacts">Sabato</p>
+                        <p class="time-contacts">12:00 AM - 16:00 PM</p>
+                      </div>
+                      <ul class="menu-contacts">
+                        <li class="list menu-item-contacts">
+                          <a href="tel:+390648239056" class="contacts-phone-mail">+39 (064) 8239 056</a
+                          >
+                        </li>
+                        <li class="list menu-item-contacts">
+                          <a href="mailto:noreply@gmail.com" class="contacts-phone-mail">noreply@gmail.com</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="list info-contacts">
+                      <div class="city-contacts">
+                        <p class="city-name-contacts">Venezia</p>
+                        <a href="https://www.google.com/maps?q=45.492440099999996,12.2430303" target="_blank" class="city-address-contacts">P.za XXVII Ottobre, 91 - 30172 Venezia
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.876080799557!2d12.2430303!3d45.492440099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477eb43ffa8f5c3f%3A0x684f1b6c8b437062!2zUC56YSBYWFZJSSBPdHRvYnJlLCA5MSwgMzAxNzIgVmVuZXppYSBWRSwg0JjRgtCw0LvQuNGP!5e0!3m2!1sru!2sde!4v1709075389487!5m2!1sru!2sde" width="0" height="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </a>
+                      </div>
+                      <div class="day-and-time-contacts">
+                        <p class="day-contacts">Lunedì-Venerdì</p>
+                        <p class="time-contacts morning-time">10:00 AM - 18:00 PM</p>
+                        <p class="day-contacts">Sabato</p>
+                        <p class="time-contacts">12:00 AM - 16:00 PM</p>
+                      </div>
+                      <ul class="menu-contacts">
+                        <li class="list menu-item-contacts">
+                          <a href="tel:+391618239057" class="contacts-phone-mail">+39 (161) 8239 057</a>
+                        </li>
+                        <li class="list menu-item-contacts">
+                          <a href="mailto:noreply@gmail.com" class="contacts-phone-mail">noreply@gmail.com</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+              </section>
+    </main>
+    <footer>
+        <div class="conteiner">
+                <div class="footer-contacts-item">
+                    <p class="footer-text-contacts">Sentiti libero di contattare </p>
+                  <ul class="social-link-list">
+                    <li class="social-item">
+                      <a href="https://web.telegram.org/k/" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" width="34" height="34">
+                          <use href="./images/sprite.svg#icon-telegram"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social-item">
+                      <a href="https://uk-ua.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <svg class="social-icon" width="34" height="34">
+                          <use href="./images/sprite.svg#icon-facebook2"></use>
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                          <svg class="social-icon" width="34" height="34">
+                            <use href="./images/sprite.svg#icon-instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social-item">
+                        <a href="https://wa.me/" target="_blank" rel="noopener noreferrer">
+                          <svg class="social-icon" width="34" height="34">
+                            <use href="./images/sprite.svg#icon-whatsapp"></use>
+                          </svg>
+                        </a>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="container">
+                <div class="footer-string">
+                  <p class="text-copyright">© 2024-<svg class="icon" width="14" height="14">
+                    <use href="./images/sprite.svg#icon-home"></use>
+                </svg>
+                <span class="logo-footer">Proprietà</span><span class="logo-part">Italia</span>. Tutti i diritti riservati.</p>
+                </div>
+              </div>
+    </footer>
+    <script src="./js/modal.js"></script>
+</body>
+</html>
